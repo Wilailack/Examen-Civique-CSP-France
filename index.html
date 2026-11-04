@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QCM Examen civique CSP</title>
+<style>
+:root{--bg:#f6f6fb;--card:#fff;--tx:#161616;--mu:#666;--bd:#d8d8e6;--pr:#000091;--ok:#18753c;--okb:#dff5e6;--ko:#ce0500;--kob:#fde4e3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121218;--card:#1e1e28;--tx:#eee;--mu:#aaa;--bd:#3a3a4c;--pr:#8f9cff;--ok:#7be0a0;--okb:#173324;--ko:#ff8a85;--kob:#3a1c1b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.45}
+main{max-width:680px;margin:0 auto;padding:16px}
+h1{font-size:1.25rem;margin:4px 0 12px;color:var(--pr)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 12px;font-size:.85rem;cursor:pointer}
+.chip.on{background:var(--pr);color:var(--bg);border-color:var(--pr)}
+.bar{display:flex;justify-content:space-between;color:var(--mu);font-size:.9rem;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.cat{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mu);margin-bottom:6px}
+.q{font-size:1.15rem;font-weight:600;margin:0 0 14px}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font-size:1rem;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--pr)}
+.opt.ok{background:var(--okb);border-color:var(--ok);color:var(--ok);font-weight:600}
+.opt.ko{background:var(--kob);border-color:var(--ko);color:var(--ko)}
+.opt:disabled{cursor:default}
+.fb{min-height:1.4em;margin:10px 0;font-weight:600}
+.act{display:flex;gap:8px;justify-content:flex-end}
+.btn{border:0;border-radius:8px;padding:10px 16px;background:var(--pr);color:var(--bg);font-size:.95rem;cursor:pointer}
+.btn.sec{background:transparent;color:var(--pr);border:1px solid var(--pr)}
+.btn:disabled{opacity:.4;cursor:default}
+.chip small{display:block;font-size:.7rem;opacity:.85}
+.thh{font-size:.9rem;color:var(--mu);margin:0 0 8px}
+.se{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font-size:1rem;margin-bottom:10px}
+.rf{margin:8px 0;border:1px solid var(--bd);border-radius:10px;padding:0 12px}
+.rf summary{cursor:pointer;font-weight:600;color:var(--pr);padding:10px 0}
+.rt{color:var(--tx);opacity:.85;font-size:.92rem;margin-top:2px}
+.ri{padding:8px 0;border-top:1px solid var(--bd)}
+.rq{font-weight:600;font-size:.95rem}
+.ra{color:var(--ok);font-size:.95rem;margin-top:2px}
+[hidden]{display:none!important}
+.src{padding-left:18px}.src li{margin:8px 0}.src a{color:var(--pr)}
+</style></head>
+<body><main>
+<h1>QCM – Examen civique (CSP)</h1>
+<section class="card" id="intro">
+<p class="cat">Bienvenue · ยินดีต้อนรับ</p>
+<p>Ce quiz a été créé pour m’aider, ainsi que toutes les personnes qui le souhaitent, à découvrir la France et à s’entraîner pour l’examen civique.</p>
+<p class="rt">แบบทดสอบนี้สร้างขึ้นเพื่อช่วยฉันและทุกคนที่สนใจ ให้เรียนรู้เกี่ยวกับฝรั่งเศสและฝึกฝนเพื่อเตรียมสอบ Examen civique</p>
+<p class="cat">Sources utilisées · แหล่งอ้างอิงที่ใช้สร้างแบบทดสอบนี้</p>
+<ul class="src">
+<li><a href="https://formation-civique.interieur.gouv.fr/examen-civique/liste-officielle-des-questions-de-connaissance-csp/" target="_blank" rel="noopener">Liste officielle des questions de connaissance – CSP (ministère de l’Intérieur)</a><br><span class="rt">รายการคำถามความรู้อย่างเป็นทางการ (CSP) – กระทรวงมหาดไทยฝรั่งเศส</span></li>
+<li>Arrêté du 10 octobre 2025 relatif au programme, aux épreuves et aux modalités d’organisation de l’examen civique (Journal officiel du 12 octobre 2025, NOR INTV2527907A)<br><span class="rt">ประกาศกระทรวงลงวันที่ 10 ตุลาคม ค.ศ. 2025 ว่าด้วยหลักสูตร การสอบ และวิธีจัดสอบ (ราชกิจจานุเบกษาฝรั่งเศส)</span></li>
+<li><a href="https://examencivique.app" target="_blank" rel="noopener">examencivique.app</a> · questions complémentaires fournies par l’auteur<br><span class="rt">คำถามเพิ่มเติมที่ผู้จัดทำรวบรวมไว้</span></li>
+</ul>
+<p class="cat">Important · ข้อควรทราบ</p>
+<p>Ce quiz a été réalisé avec l’aide de l’IA (création des questions et traduction), avec la validation de mon mari, qui est français. Il ne remplace pas les sources officielles : vérifiez toujours les informations auprès du ministère.</p>
+<p class="rt">แบบทดสอบนี้สร้างและแปลโดยใช้ AI ช่วย ร่วมกับการตรวจสอบความถูกต้องโดยสามีของฉันซึ่งเป็นชาวฝรั่งเศส ไม่สามารถใช้แทนแหล่งข้อมูลทางการได้ โปรดตรวจสอบข้อมูลกับกระทรวงเสมอ</p>
+<div class="act"><button class="btn" id="go">Suivant · ถัดไป →</button></div>
+</section>
+<div id="app" hidden>
+<div class="chips" id="chips"></div>
+<div class="bar"><span id="prog"></span><span id="tm"></span><span id="score"></span></div>
+<div class="card" id="card"></div>
+</div>
+</main>
+<script>
+var CATS=["Principes et valeurs","Système institutionnel","Droits et devoirs","Histoire, géographie, culture","Vivre dans la société"];
+// [catégorie, question, bonne réponse, 3 mauvaises réponses]
+var TH=["หลักการและคุณค่าของสาธารณรัฐ","ระบบสถาบันและการเมือง","สิทธิและหน้าที่","ประวัติศาสตร์ ภูมิศาสตร์ และวัฒนธรรม","การใช้ชีวิตในสังคมฝรั่งเศส"];
+var TT=[[
+["วันที่ 14 กรกฎาคมตรงกับเหตุการณ์อะไร?","วันชาติฝรั่งเศส (14 กรกฎาคม ค.ศ. 1789 และ 1790)"],
+["อะไรคือหนึ่งในสัญลักษณ์ของสาธารณรัฐฝรั่งเศส?","ธงไตรรงค์"],
+["หลักความเสมอภาคหมายความว่า:","กฎหมายใช้กับทุกคนอย่างเท่าเทียมกัน โดยมีสิทธิและหน้าที่เหมือนกัน"],
+["“เสรีภาพ ความเสมอภาค ภราดรภาพ” คือ:","คำขวัญของสาธารณรัฐฝรั่งเศส"],
+["เรามีสิทธิ์ดูหมิ่นผู้อื่นในที่สาธารณะเพราะเขาแตกต่างจากเรา (ความพิการ ลักษณะภายนอก เพศ ฯลฯ) หรือไม่?","ไม่ การดูหมิ่นที่เกี่ยวกับคุณลักษณะที่กฎหมายคุ้มครองมีโทษตามกฎหมาย"],
+["บางอาชีพสงวนไว้สำหรับผู้ชายได้หรือไม่?","ไม่ได้ การกีดกันใครออกจากงานเพราะเพศเป็นการเลือกปฏิบัติที่ผิดกฎหมาย"],
+["รัฐธรรมนูญของสาธารณรัฐที่ 5 ลงวันที่เมื่อใด?","วันที่ 4 ตุลาคม ค.ศ. 1958"],
+["ระบอบการปกครองของฝรั่งเศสคือ:","สาธารณรัฐ (สาธารณรัฐที่ 5)"],
+["สิ่งใดเป็นตัวแทนอย่างเป็นทางการของสาธารณรัฐฝรั่งเศส?","มารียานน์"],
+["เราเห็นคำขวัญของสาธารณรัฐได้ที่ไหน?","ที่อาคารราชการ (ศาลาว่าการเมือง โรงเรียน ฯลฯ)"],
+["อะไรคือสัญลักษณ์อย่างเป็นทางการของสาธารณรัฐฝรั่งเศส?","คำขวัญ ธง เพลงชาติ มารียานน์ และวันชาติ"],
+["ความเสมอภาคคืออะไร?","การได้รับการปฏิบัติและมีสิทธิเท่าเทียมกันของทุกคนต่อหน้ากฎหมาย"],
+["เสรีภาพหมายความว่าอย่างไร?","ทำสิ่งที่กฎหมายอนุญาตได้โดยไม่ทำร้ายผู้อื่น"],
+["คำว่า “ภราดรภาพ” ในคำขวัญของฝรั่งเศสหมายความว่าอย่างไร?","ความสามัคคี การช่วยเหลือกันและอยู่ร่วมกัน"],
+["สัตว์ชนิดใดเป็นสัญลักษณ์ของฝรั่งเศส?","ไก่ตัวผู้ชาวกอล"],
+["บทบาทหนึ่งของสมาคมคืออะไร?","ช่วยเหลือผู้คนและปกป้องผลประโยชน์ส่วนรวม"],
+["เพลงชาติฝรั่งเศสชื่ออะไร?","ลา มาร์แซแยส (La Marseillaise)"],
+["สัญลักษณ์ใดของสาธารณรัฐฝรั่งเศสที่มีสามสี?","ธงชาติฝรั่งเศส"],
+["วันชาติฝรั่งเศสคือวันที่เท่าไร?","วันที่ 14 กรกฎาคม"],
+["คำขวัญของสาธารณรัฐฝรั่งเศสคืออะไร?","เสรีภาพ ความเสมอภาค ภราดรภาพ"],
+["ภาษาราชการของสาธารณรัฐฝรั่งเศสคือภาษาอะไร?","ภาษาฝรั่งเศส"],
+["ภาษาฝรั่งเศสมีสถานะอย่างไรในสาธารณรัฐ?","ภาษาฝรั่งเศสเป็นภาษาราชการของสาธารณรัฐ (หลักการตามรัฐธรรมนูญ)"],
+["เสรีภาพใดที่ทำให้ทุกคนแสดงความคิดเห็นได้?","เสรีภาพในการแสดงออก"],
+["ข้อใดถูกต้อง? เสรีภาพในการแสดงออก:","เป็นเสรีภาพขั้นพื้นฐานที่มีข้อจำกัดตามกฎหมาย (หมิ่นประมาท ดูหมิ่น)"],
+["ธงชาติฝรั่งเศสมีสีอะไรบ้าง?","น้ำเงิน ขาว แดง"],
+["ลา มาร์แซแยสคืออะไร?","เพลงชาติของฝรั่งเศส"],
+["ตามธรรมเนียม มีการจัดอะไรที่ถนนช็องเซลีเซในวันที่ 14 กรกฎาคมเพื่อฉลองวันชาติ?","ขบวนพาเหรดทหาร โดยมีประธานาธิบดีเข้าร่วม"],
+["มารียานน์คือใคร?","ตัวแทนเชิงสัญลักษณ์ของสาธารณรัฐฝรั่งเศสในรูปสตรี"],
+["บุคคลสามารถเปลี่ยนศาสนาได้อย่างอิสระหรือไม่?","ได้ เสรีภาพทางมโนธรรมรวมถึงสิทธิ์ในการเปลี่ยนศาสนา"],
+["ฝรั่งเศสเป็นสาธารณรัฐที่แบ่งแยกไม่ได้ … เป็นประชาธิปไตยและเป็นสังคม จงเติมคำจากมาตรา 1 ของรัฐธรรมนูญ:","ฆราวาส (laïque คือไม่ผูกกับศาสนา)"],
+["กฎหมายแยกศาสนจักรออกจากรัฐผ่านเมื่อปีใด?","ค.ศ. 1905"],
+["หลักฆราวาสนิยมอนุญาตให้ทำอะไร?","รับรองความเป็นกลางของรัฐและคุ้มครองเสรีภาพทางมโนธรรม"],
+["สิทธิใดที่หลักฆราวาสนิยมรับรอง?","เสรีภาพทางมโนธรรม (จะเชื่อหรือไม่เชื่อก็ได้)"],
+["ทำไมต้องเคารพหลักฆราวาสนิยมในโรงเรียน?","เพื่อให้เกิดความเป็นกลางและคุ้มครองเสรีภาพทางมโนธรรมของนักเรียน"],
+["ฆราวาสนิยม (laïcité) คืออะไร?","หลักการที่รัฐเป็นกลางต่อทุกศาสนา"],
+["เด็กปฏิเสธไม่ไปโรงเรียนด้วยเหตุผลทางศาสนาได้หรือไม่?","ไม่ได้ การเรียนเป็นข้อบังคับ และไม่สามารถปฏิเสธการเรียนด้วยเหตุผลทางศาสนา"],
+["บุคคลมีสิทธิ์ไม่เชื่อในศาสนาใดหรือไม่?","มี เสรีภาพทางมโนธรรมรวมถึงสิทธิ์ที่จะไม่เชื่อ"]
+],[
+["อายุเท่าไรจึงมีสิทธิ์ลงคะแนนเสียง?","18 ปี"],
+["ประธานาธิบดีแห่งสาธารณรัฐฝรั่งเศสได้รับเลือกให้ดำรงตำแหน่งนานเท่าไร?","5 ปี"],
+["สมาชิกสภาผู้แทนราษฎร (députés) ได้รับเลือกให้ดำรงตำแหน่งนานเท่าไร?","5 ปี"],
+["สมาชิกวุฒิสภา (sénateurs) ได้รับเลือกให้ดำรงตำแหน่งนานเท่าไร?","6 ปี"],
+["สภาผู้แทนราษฎร (Assemblée nationale) มีสมาชิกกี่คน?","577 คน"],
+["ใครมีอำนาจนิติบัญญัติ?","รัฐสภา"],
+["ใครมีอำนาจบริหาร?","ประธานาธิบดีและรัฐบาล"],
+["การแบ่งแยกอำนาจมีสามอำนาจใดบ้าง?","นิติบัญญัติ บริหาร ตุลาการ"],
+["ผู้ว่าราชการจังหวัด (préfet) คือใคร?","ผู้แทนของรัฐในจังหวัด (département)"],
+["ใครบริหารเทศบาล (commune)?","นายกเทศมนตรี (maire)"],
+["ฝรั่งเศสมีกี่จังหวัด (département)?","101 จังหวัด"],
+["“การเลือกตั้งโดยทั่วไป” (suffrage universel) หมายความว่าอย่างไร?","พลเมืองที่บรรลุนิติภาวะทุกคนลงคะแนนเสียงได้"],
+["เงินสกุลใดใช้ในฝรั่งเศส?","ยูโร"],
+["วันยุโรปเฉลิมฉลองเมื่อใด?","วันที่ 9 พฤษภาคม"],
+["ประเทศใดเป็นประเทศผู้ก่อตั้งสหภาพยุโรป?","เยอรมนี"],
+["รัฐใดไม่ได้เป็นสมาชิกของสหภาพยุโรป?","สวิตเซอร์แลนด์"],
+["ณ วันที่ 1 มกราคม ค.ศ. 2025 สหภาพยุโรปมีรัฐสมาชิกกี่รัฐ?","27 รัฐ"],
+["ประธานาธิบดีมีอำนาจทุกอย่างหรือไม่?","ไม่ อำนาจถูกจำกัดโดยรัฐธรรมนูญ"],
+["ใครพำนักอยู่ที่ทำเนียบเอลิเซ (palais de l’Élysée)?","ประธานาธิบดีแห่งสาธารณรัฐ"],
+["ผู้นำถูกเลือกโดยประชาชนใน:","ระบอบประชาธิปไตย"],
+["เรามีสิทธิ์ไม่ปฏิบัติตามกฎหมายหรือไม่?","ไม่ กฎหมายใช้กับทุกคน"],
+["ใครต้องปฏิบัติตามกฎหมาย?","ทุกคน ไม่มียกเว้น"],
+["บทบาทของอำนาจตุลาการคืออะไร?","ทำให้กฎหมายถูกปฏิบัติตามและลงโทษผู้ที่ฝ่าฝืน"],
+["ผู้พิพากษามีอำนาจอะไร? อำนาจ:","ตุลาการ"],
+["อำนาจตุลาการใช้โดย:","ผู้พิพากษาและเจ้าหน้าที่ตุลาการ"],
+["จะเกิดอะไรขึ้นถ้ารัฐมนตรีไม่ปฏิบัติตามกฎหมาย?","สามารถถูกพิจารณาคดีและลงโทษได้เหมือนพลเมืองทั่วไป"],
+["ใครได้รับเลือกในการเลือกตั้งสมาชิกสภาผู้แทนราษฎร (élections législatives)?","สมาชิกสภาผู้แทนราษฎร"],
+["ใครได้รับเลือกในการเลือกตั้งประธานาธิบดี?","ประธานาธิบดีแห่งสาธารณรัฐ"],
+["ต้องมีเงื่อนไขอะไรจึงจะลงคะแนนเสียงเลือกตั้งได้?","ต้องขึ้นทะเบียนในบัญชีรายชื่อผู้มีสิทธิเลือกตั้ง"],
+["ใครลงคะแนนเสียงเลือกตั้งในฝรั่งเศสได้?","พลเมืองฝรั่งเศสที่บรรลุนิติภาวะ"],
+["เกี่ยวกับพรรคการเมือง ข้อใดถูกต้อง?","ทุกคนมีอิสระที่จะเข้าร่วมพรรคหรือไม่ก็ได้"],
+["บทบาทของสมาชิกสภาผู้แทนราษฎรคืออะไร?","ลงมติออกกฎหมายและตรวจสอบรัฐบาล"],
+["ใครเลือกสมาชิกสภาผู้แทนราษฎร?","ประชาชน (พลเมือง)"],
+["ใครลงมติออกกฎหมาย?","รัฐสภา"],
+["ใครเป็นตัวแทนของรัฐในจังหวัด?","ผู้ว่าราชการจังหวัด (préfet)"],
+["บทบาทของรัฐสภาคืออะไร?","ลงมติออกกฎหมาย"],
+["ระบอบการเมืองของฝรั่งเศสในปัจจุบันคืออะไร?","ประชาธิปไตย"],
+["เงื่อนไขใดจำเป็นสำหรับการลงคะแนนในการเลือกตั้งรัฐสภายุโรป?","เป็นพลเมืองสหภาพยุโรป บรรลุนิติภาวะ และขึ้นทะเบียนผู้มีสิทธิเลือกตั้ง"],
+["การเลือกตั้งรัฐสภายุโรปจัดทุกกี่ปี?","ทุก 5 ปี"],
+["ใครเลือกสมาชิกรัฐสภายุโรป?","พลเมืองของสหภาพยุโรป"],
+["ใครแต่งตั้งนายกรัฐมนตรี?","ประธานาธิบดีแห่งสาธารณรัฐ"],
+["รัฐสภาประกอบด้วย:","สภาผู้แทนราษฎรและวุฒิสภา"],
+["อำนาจบริหารคืออะไร? อำนาจที่:","ปกครองและบังคับใช้กฎหมาย"],
+["สมาชิกวุฒิสภา (sénateurs) ได้รับเลือกตั้งเมื่อใด?","ทุก 3 ปี ครั้งละครึ่งหนึ่ง โดยการเลือกตั้งทางอ้อม"],
+["ใครได้รับเลือกในการเลือกตั้งท้องถิ่น (élections municipales)?","สมาชิกสภาเทศบาล (ซึ่งเลือกนายกเทศมนตรีต่อไป)"],
+["สหภาพยุโรปก่อตั้งขึ้นในปีใด (สนธิสัญญามาสทริชต์)?","ค.ศ. 1992"],
+["เหรียญและธนบัตรยูโรหมุนเวียนใช้งานตั้งแต่ปีใด?","ค.ศ. 2002"],
+["ธงของสหภาพยุโรปมีลักษณะอย่างไร?","พื้นสีน้ำเงิน มีดาวสีเหลืองสิบสองดวงเรียงเป็นวงกลม"],
+["เพลงประจำสหภาพยุโรปคืออะไร?","บทเพลง “Ode à la joie” (บทเพลงแห่งความปีติ)"],
+["ข้อใดเป็นสถาบันของสหภาพยุโรป?","คณะกรรมาธิการยุโรป (Commission européenne)"],
+["หลักการใดของสหภาพยุโรปที่ทำให้เดินทางและทำงานในประเทศสมาชิกได้?","การเดินทางเคลื่อนย้ายอย่างเสรี (libre circulation)"],
+["สถาบันใดตรวจสอบว่ากฎหมายสอดคล้องกับรัฐธรรมนูญ?","คณะตุลาการรัฐธรรมนูญ (Conseil constitutionnel)"],
+["สถาบันใดปกป้องสิทธิของพลเมืองต่อหน่วยงานราชการ?","ผู้พิทักษ์สิทธิ (Défenseur des droits)"]
+],[
+["ปฏิญญาว่าด้วยสิทธิมนุษยชนและพลเมืองลงวันที่ปีใด?","ค.ศ. 1789"],
+["รัฐธรรมนูญฉบับปัจจุบันของฝรั่งเศสเรียกว่าอะไร?","รัฐธรรมนูญของสาธารณรัฐที่ 5"],
+["โทษประหารชีวิต:","ถูกยกเลิกในฝรั่งเศสแล้ว"],
+["ในฝรั่งเศส การสมรสกับหลายคนพร้อมกันถูกกฎหมายหรือไม่?","ไม่ การมีคู่สมรสหลายคนเป็นสิ่งต้องห้าม"],
+["ผู้หญิงสามารถทำแท้งได้หรือไม่?","ได้ เป็นสิทธิที่กฎหมายรับรอง"],
+["ความผิด (infraction) คืออะไร?","การกระทำที่กฎหมายห้าม"],
+["ความผิดใดร้ายแรงที่สุด?","อาชญากรรมร้ายแรง (crime)"],
+["เมื่อเกิดอุบัติเหตุ ควรทำอย่างไร?","ป้องกันอันตราย แจ้งหน่วยกู้ภัย และช่วยเหลือผู้ประสบเหตุ"],
+["บทบาทของตำรวจคืออะไร?","รักษาความปลอดภัยและทำให้กฎหมายถูกปฏิบัติตาม"],
+["การทิ้งขวดลงบนถนนเป็นสิ่งที่:","ผิดกฎหมายและมีโทษปรับ"],
+["ใครลงโทษผู้ที่ขโมยของ?","ศาล (กระบวนการยุติธรรม)"],
+["การค้ามนุษย์คืออะไร?","การแสวงหาประโยชน์จากบุคคลโดยขัดต่อความสมัครใจ"],
+["ผู้ที่ไม่ปฏิบัติตามกฎหมายต้องเผชิญอะไร?","การลงโทษ"],
+["ข้อความที่ระบุสิทธิและหน้าที่ของผู้พำนักในฝรั่งเศสเรียกว่าอะไร?","กฎบัตรสิทธิและหน้าที่ของพลเมืองฝรั่งเศส"],
+["เกี่ยวกับสิทธิส่วนบุคคล ข้อใดถูกต้อง?","ทุกคนมีสิทธิ ซึ่งมาพร้อมกับหน้าที่"],
+["สิทธิใดต่อไปนี้เป็นสิทธิขั้นพื้นฐาน?","เสรีภาพในการแสดงออก"],
+["เอกสารใดต่อไปนี้รับรองสิทธิและเสรีภาพในฝรั่งเศส?","รัฐธรรมนูญ"],
+["เสรีภาพในการแสดงออกคืออะไร?","สิทธิที่จะแสดงความคิดเห็นภายใต้กรอบของกฎหมาย"],
+["สิทธิใดทำให้บุคคลต่อสู้คดีในศาลเพื่อป้องกันตนเองได้?","สิทธิในการต่อสู้คดี (droit à la défense)"],
+["ข้อความรากฐานที่กำหนดสิทธิและหน้าที่ของพลเมืองแต่ละคนคืออะไร?","ปฏิญญาว่าด้วยสิทธิมนุษยชนและพลเมือง"],
+["ข้อความใดได้รับการรับรองในช่วงการปฏิวัติฝรั่งเศส?","ปฏิญญาว่าด้วยสิทธิมนุษยชนและพลเมือง"],
+["เสรีภาพใดทำให้บุคคลไม่ต้องมีศาสนา?","เสรีภาพทางมโนธรรม"],
+["สามารถหย่าได้เสมอหรือไม่?","ได้ แม้ว่าคู่สมรสฝ่ายหนึ่งไม่ยินยอม"],
+["เกี่ยวกับข้อจำกัดของเสรีภาพส่วนบุคคล ข้อใดถูกต้อง?","ถูกจำกัดโดยกฎหมายและโดยสิทธิของผู้อื่น"],
+["ควรลดปริมาณขยะหรือไม่?","ควร เพื่อปกป้องสิ่งแวดล้อม"],
+["ทำไมเสรีภาพส่วนบุคคลจึงถูกจำกัดได้?","เพื่อคุ้มครองสิทธิของผู้อื่นและความสงบเรียบร้อยของสังคม"],
+["สัญชาติฝรั่งเศสทำให้ทำอะไรได้?","ลงคะแนนเสียงและมีส่วนร่วมในชีวิตทางการเมือง"],
+["บทบาทของตำรวจสังกัดกระทรวงกลาโหม (gendarmerie) คืออะไร?","รักษาความปลอดภัยและทำให้กฎหมายถูกปฏิบัติตาม"],
+["จะลดปริมาณขยะได้อย่างไร?","โดยการแยกขยะและหลีกเลี่ยงการทิ้งขว้างของเสีย"],
+["การวางเครื่องซักผ้าที่เสียแล้วไว้บนทางเท้าเป็นสิ่งที่:","ผิดกฎหมายและมีโทษ"],
+["ผู้ที่ตกเป็นเหยื่อความรุนแรงควรทำอย่างไร?","ติดต่อตำรวจหรือ gendarmerie (เบอร์ 17) และขอความช่วยเหลือ"],
+["กฎบัตรสิ่งแวดล้อม (Charte de l’environnement) ได้รับการรับรองในปีใด?","ค.ศ. 2004"],
+["ภาษี (impôt) มีไว้เพื่ออะไร?","เพื่อจัดหาเงินให้บริการสาธารณะเพื่อประโยชน์ของทุกคน"],
+["หน้าที่พลเมืองข้อใดที่อาจถูกเรียกให้พลเมืองฝรั่งเศสทำ?","เป็นลูกขุนในการพิจารณาคดี (juré)"]
+],[
+["การปฏิวัติฝรั่งเศสเริ่มขึ้นในปีใด?","ค.ศ. 1789"],
+["นโปเลียนที่ 1 คือใคร?","จักรพรรดิของชาวฝรั่งเศส"],
+["สงครามโลกครั้งที่สองเกิดขึ้นเมื่อใด?","ค.ศ. 1939-1945"],
+["สงครามใดเกิดขึ้นระหว่าง ค.ศ. 1914 ถึง 1918?","สงครามโลกครั้งที่หนึ่ง"],
+["วันที่ 11 พฤศจิกายนเป็นวันหยุดราชการ วันนี้ตรงกับเหตุการณ์อะไร?","การสงบศึกปี ค.ศ. 1918"],
+["การเลิกทาสในฝรั่งเศสเกิดขึ้นอย่างเด็ดขาดในปีใด?","ค.ศ. 1848"],
+["ใครทำให้โรงเรียนฟรี เป็นฆราวาส และเป็นภาคบังคับ?","ฌูล แฟร์รี (Jules Ferry)"],
+["ใครก่อตั้งสาธารณรัฐที่ 5?","ชาร์ล เดอ โกล (Charles de Gaulle)"],
+["กษัตริย์ฝรั่งเศสในช่วงการปฏิวัติฝรั่งเศสคือใคร?","พระเจ้าหลุยส์ที่ 16"],
+["ฝรั่งเศสมีสาธารณรัฐมาแล้วกี่สาธารณรัฐ?","5 สาธารณรัฐ"],
+["โชอาห์ (Shoah) คืออะไร?","การสังหารหมู่ชาวยิวในยุโรปโดยนาซี (ฮอโลคอสต์)"],
+["เมืองหลวงของฝรั่งเศสคืออะไร?","ปารีส"],
+["แม่น้ำใดไหลผ่านฝรั่งเศส?","แม่น้ำลัวร์ (La Loire)"],
+["มหาสมุทรใดอยู่ติดชายฝั่งตะวันตกของฝรั่งเศส?","มหาสมุทรแอตแลนติก"],
+["ทะเลใดอยู่ทางใต้ของฝรั่งเศสแผ่นดินใหญ่?","ทะเลเมดิเตอร์เรเนียน"],
+["เทือกเขาใดอยู่ระหว่างฝรั่งเศสกับอิตาลี?","เทือกเขาแอลป์"],
+["ฝรั่งเศสแผ่นดินใหญ่มีกี่แคว้น (région)?","13 แคว้น"],
+["เกาะใดเป็นจังหวัดโพ้นทะเลของฝรั่งเศส?","เกาะเรอูนียง (La Réunion)"],
+["ฝรั่งเศสแผ่นดินใหญ่ตั้งอยู่ในทวีปใด?","ทวีปยุโรป"],
+["หอไอเฟลตั้งอยู่ในเมืองใด?","ปารีส"],
+["โมลีแยร์ (Molière) คือใคร?","นักเขียนบทละคร"],
+["พิพิธภัณฑ์ลูฟวร์ (Louvre) คืออะไร?","พิพิธภัณฑ์"],
+["ซิมอน เดอ โบวัวร์ (Simone de Beauvoir) คือใคร?","นักเขียนและนักปรัชญาสตรีนิยม"],
+["ปอล เซซาน (Paul Cézanne) คือใคร?","จิตรกร"],
+["ฉลองคริสต์มาสเมื่อใด?","วันที่ 25 ธันวาคม"],
+["บุคคลสำคัญทางประวัติศาสตร์คนใดเป็นชาวฝรั่งเศส?","หลุยส์ ปาสเตอร์ (Louis Pasteur)"],
+["ปัจจุบันฝรั่งเศสอยู่ในสาธารณรัฐที่เท่าไร?","สาธารณรัฐที่ 5"],
+["ประเทศหรือภูมิภาคใดของโลกเคยตกเป็นอาณานิคมของฝรั่งเศส?","แอลจีเรีย"],
+["ประชาคมเศรษฐกิจยุโรป (CEE) ก่อตั้งในปีใด?","ค.ศ. 1957"],
+["ใครเป็นประธานาธิบดีคนแรกที่ได้รับเลือกภายใต้สาธารณรัฐที่ 5?","ชาร์ล เดอ โกล (Charles de Gaulle)"],
+["โรงเรียนรัฐบาลฟรีตั้งแต่ปีใด?","ค.ศ. 1881"],
+["วันที่ 14 กรกฎาคมเฉลิมฉลองอะไร?","วันชาติ (การบุกทลายคุกบาสตีย์)"],
+["ปี ค.ศ. 1958 สำคัญต่อฝรั่งเศสเพราะเหตุใด?","การก่อตั้งสาธารณรัฐที่ 5"],
+["เมืองใดเป็นเมืองของฝรั่งเศส?","ลียง (Lyon)"],
+["ปารีสคืออะไร?","เมืองหลวงของฝรั่งเศส"],
+["เมืองใดเป็นเมืองท่าเรือทางทะเลขนาดใหญ่?","มาร์เซย์ (Marseille)"],
+["เมืองใดตั้งอยู่ริมทะเลเมดิเตอร์เรเนียน?","นีซ (Nice)"],
+["เกาะคอร์ซิกา (la Corse) ตั้งอยู่ที่ไหน?","ในทะเลเมดิเตอร์เรเนียน"],
+["ชาร์ล โบดแลร์ (Charles Baudelaire) คือใคร?","กวี"],
+["ฌอร์ฌ ซานด์ (George Sand) คือใคร?","นักเขียนสตรีแห่งศตวรรษที่ 19"],
+["อัลแบร์ กามูส์ (Albert Camus) คือใคร?","นักเขียน"],
+["มาร์ก ชากาล (Marc Chagall) คือใคร?","จิตรกร"],
+["โจเซฟีน เบเกอร์ (Joséphine Baker) คือใคร?","นักร้อง นักเต้น และสมาชิกขบวนการต่อต้านนาซี"],
+["ใครเป็นนักร้องหญิงชาวฝรั่งเศสที่มีชื่อเสียง?","เอดิต ปียาฟ (Édith Piaf)"],
+["ฌอง เดอ ลา ฟงแตน (Jean de La Fontaine) คือใคร?","กวีผู้เขียนนิทานคติสอนใจ (fables)"],
+["นักเขียนคนใดเป็นชาวฝรั่งเศส?","เอมีล โซลา (Émile Zola)"],
+["สงครามโลกครั้งที่หนึ่งเกิดขึ้นเมื่อใด?","ค.ศ. 1914-1918"],
+["ผู้หญิงในฝรั่งเศสได้รับสิทธิลงคะแนนเสียงในปีใด?","ค.ศ. 1944"],
+["องค์การสหประชาชาติ (ONU) ก่อตั้งในปีใด?","ค.ศ. 1945"],
+["ประธานาธิบดีคนใดยกเลิกโทษประหารชีวิตในปี ค.ศ. 1981?","ฟร็องซัว มีแตร็อง (François Mitterrand)"],
+["ใครประกาศ “คำเรียกร้องวันที่ 18 มิถุนายน” ปี ค.ศ. 1940?","ชาร์ล เดอ โกล (Charles de Gaulle)"],
+["จักรพรรดิพระองค์ใดสร้างประมวลกฎหมายแพ่ง (Code civil) ในต้นศตวรรษที่ 19?","นโปเลียนที่ 1"],
+["สาธารณรัฐที่ 1 ประกาศตั้งขึ้นในปีใด?","ค.ศ. 1792"],
+["ในปี ค.ศ. 2025 ฝรั่งเศสมีประชากรประมาณเท่าไร?","ประมาณ 68 ล้านคน"],
+["ฝรั่งเศสมีจังหวัดและแคว้นโพ้นทะเล (DROM) กี่แห่ง?","5 แห่ง"],
+["ฝรั่งเศสอยู่อันดับที่เท่าไรในบรรดาจุดหมายปลายทางท่องเที่ยวของโลก?","อันดับที่ 1"],
+["มีผู้พูดภาษาฝรั่งเศสในโลกประมาณกี่คน (ฟรองโคโฟนี)?","ประมาณ 321 ล้านคน"],
+["ภาษาฝรั่งเศสเป็นภาษาที่มีผู้พูดมากเป็นอันดับที่เท่าไรของโลก?","อันดับที่ 5"],
+["องค์กรใดรวมประเทศที่ใช้ภาษาฝรั่งเศส?","องค์การระหว่างประเทศแห่งกลุ่มฟรองโคโฟนี (OIF)"]
+],[
+["โทรหมายเลขฉุกเฉินใดเพื่อเรียกหน่วยแพทย์ฉุกเฉิน (SAMU)?","เบอร์ 15"],
+["โทรหมายเลขฉุกเฉินใดเพื่อเรียกหน่วยดับเพลิง?","เบอร์ 18"],
+["เวลาทำงานตามกฎหมายต่อสัปดาห์คือเท่าไร?","35 ชั่วโมง"],
+["SMIC คืออะไร?","ค่าจ้างขั้นต่ำตามกฎหมาย"],
+["France Travail ช่วยเหลือใคร?","ผู้ที่กำลังหางาน"],
+["การทำงานโดยไม่แจ้งทางการ (travail non déclaré) เป็นสิ่งที่:","ผิดกฎหมาย"],
+["บัตร Vitale ใช้ทำอะไร?","ใช้ขอคืนค่ารักษาพยาบาล"],
+["ประกันสุขภาพเสริม (mutuelle) ใช้ทำอะไร?","เสริมส่วนที่ประกันสุขภาพแห่งชาติ (Assurance maladie) ไม่คืนให้"],
+["เมื่อมีปัญหาสุขภาพที่ไม่เร่งด่วน ควรไปพบใครก่อน?","แพทย์ประจำตัว (médecin traitant)"],
+["เมื่อใดควรไปห้องฉุกเฉินของโรงพยาบาล?","เมื่อมีอันตรายถึงชีวิตหรือเหตุฉุกเฉินร้ายแรง"],
+["วัตถุประสงค์ของการฉีดวัคซีนภาคบังคับคืออะไร?","เพื่อปกป้องสุขภาพของแต่ละคนและของทุกคน"],
+["การเรียนเป็นภาคบังคับจนถึงอายุเท่าไร?","16 ปี"],
+["การเรียนเป็นภาคบังคับสำหรับใคร?","เด็กทุกคนอายุ 3 ถึง 16 ปี ไม่ว่าจะเป็นชาวฝรั่งเศสหรือชาวต่างชาติ"],
+["ได้รับวุฒิอะไรเมื่อจบมัธยมปลาย (lycée)?","ปริญญาบากาโลเรอา (baccalauréat)"],
+["นักเรียนไปเรียนที่ไหนหลังจบโรงเรียนประถม?","ที่โรงเรียนมัธยมต้น (collège)"],
+["ผู้หญิงตั้งธุรกิจของตนเองได้หรือไม่?","ได้ เหมือนผู้ชาย"],
+["การสมรสจะได้รับการรับรองตามกฎหมายต้องมีเงื่อนไขอะไร?","ต้องจัดพิธีที่ศาลาว่าการเมือง (mairie) โดยเจ้าหน้าที่ทะเบียนราษฎร"],
+["ต้องแจ้งเกิดบุตรที่สำนักทะเบียนของศาลาว่าการเมืองเมื่อใด?","ภายใน 5 วันหลังคลอด"],
+["หลังได้ใบขับขี่แล้ว ต้องทำอะไรจึงจะขับรถของตนเองได้?","ทำประกันภัยรถยนต์"],
+["นายจ้างต้องทำอย่างไรในการกำหนดค่าจ้าง?","ต้องปฏิบัติตามค่าจ้างขั้นต่ำ (SMIC)"],
+["ขั้นตอนแรกในการหางานคืออะไร?","ลงทะเบียนกับ France Travail"],
+["ชาวต่างชาติที่พำนักถูกกฎหมายตั้งธุรกิจของตนเองได้หรือไม่?","ได้ ตามเงื่อนไขของใบอนุญาตพำนัก"],
+["ผู้เยาว์ทำงานได้ตั้งแต่อายุเท่าไร?","ตั้งแต่ 16 ปี ยกเว้นกรณีที่กฎหมายกำหนดไว้"],
+["ต้องขอคืนค่ารักษาพยาบาลจากหน่วยงานใด?","ประกันสุขภาพแห่งชาติ (Assurance maladie)"],
+["หมายเลขฉุกเฉินคืออะไร?","หมายเลขโทรฟรีที่โทรเมื่อมีอันตราย"],
+["เกี่ยวกับการเข้าถึงการรักษาพยาบาล ข้อใดถูกต้อง?","ทุกคนที่พำนักในฝรั่งเศสสามารถรับการรักษาได้"],
+["อำนาจปกครองของบิดามารดา (autorité parentale) กำหนดหน้าที่ว่า:","ต้องปกป้อง อบรมเลี้ยงดู และส่งบุตรเข้าเรียน"],
+["เด็กที่ลงทะเบียนเรียนที่โรงเรียนแล้ว:","ต้องไปโรงเรียนอย่างสม่ำเสมอ"],
+["เด็กที่พูดภาษาฝรั่งเศสไม่ได้:","ได้เข้าเรียนและได้รับการสนับสนุนให้เรียนภาษาฝรั่งเศส"],
+["บทบาทของแพทย์ประจำตัว (médecin traitant) คืออะไร?","ติดตามดูแลสุขภาพและประสานการรักษา"]
+]];
+var NT=["aaaaccaaaaaaaaaaaaaaaaaaaaaacabbbbbcc", "abbbbbbabbbacccccbbaaaaaaabbaaaaaabaacccbbabbccccccbb", "aaaccbbcbcbcbaaaaaaaaacbbbabbccabb", "aaaaaaaaaaabbbbbbbbccccccaaaaaaaabbbbbccccccccaaaaaaabbbccc", "bbccccbbbbbddddcaaaccccbbbdddb"];
+function lb(f,t){return f+'<small>'+t+'</small>'}
+var Q=[
+[1,"À partir de quel âge a-t-on le droit de voter ?","18 ans","16 ans","21 ans","25 ans"],
+[1,"Pour combien de temps est élu le président de la République française ?","5 ans","4 ans","6 ans","7 ans"],
+[1,"Pour combien de temps sont élus les députés ?","5 ans","3 ans","6 ans","9 ans"],
+[1,"Pour combien de temps sont élus les sénateurs ?","6 ans","4 ans","5 ans","9 ans"],
+[1,"Combien de députés composent l’Assemblée nationale ?","577","348","500","650"],
+[1,"Qui possède le pouvoir législatif ?","Le Parlement","Le président de la République","Les juges","Le préfet"],
+[1,"Qui possède le pouvoir exécutif ?","Le président de la République et le gouvernement","Le Parlement","Les juges","Les maires"],
+[1,"Quels sont les trois pouvoirs de la séparation des pouvoirs ?","Législatif, exécutif, judiciaire","Politique, religieux, militaire","Économique, social, culturel","National, régional, local"],
+[1,"Qui est le préfet ?","Le représentant de l’État dans le département","Le chef de la commune","Un juge","Un député"],
+[1,"Qui dirige la commune ?","Le maire","Le préfet","Le président","Le député"],
+[1,"Combien y a-t-il de départements en France ?","101","50","80","120"],
+[1,"Que signifie « suffrage universel » ?","Tous les citoyens majeurs peuvent voter","Seuls les hommes votent","Seuls les plus riches votent","Seuls les diplômés votent"],
+[1,"Quelle est la monnaie utilisée en France ?","L’euro","Le franc","Le dollar","La livre"],
+[1,"Quand célèbre-t-on la journée de l’Europe ?","Le 9 mai","Le 14 juillet","Le 1er janvier","Le 11 novembre"],
+[1,"Quel pays est un pays fondateur de l’Union européenne ?","L’Allemagne","L’Espagne","Le Royaume-Uni","La Pologne"],
+[1,"Quel État n’est pas membre de l’Union européenne ?","La Suisse","L’Italie","L’Espagne","La Pologne"],
+[1,"Combien d’États font partie de l’Union européenne au 1er janvier 2025 ?","27","25","28","30"],
+[1,"Est-ce que le président de la République a tous les pouvoirs ?","Non, ses pouvoirs sont limités par la Constitution","Non, il n’a aucun pouvoir","Oui, il décide de tout seul","Oui, il peut changer les lois seul"],
+[1,"Qui réside au palais de l’Élysée ?","Le président de la République","Le Premier ministre","Le maire de Paris","Le président du Sénat"],
+[2,"De quelle année date la Déclaration des droits de l’homme et du citoyen ?","1789","1848","1905","1958"],
+[2,"Comment s’appelle la Constitution actuelle de la France ?","La Constitution de la Ve République","La Constitution de la IVe République","La Constitution de la IIIe République","La Constitution de 1791"],
+[2,"La peine de mort est :","Abolie en France","Autorisée pour les meurtres","Autorisée pour la trahison","Appliquée dans certaines régions"],
+[2,"En France, est-ce légal d’être marié à plusieurs personnes en même temps ?","Non, la polygamie est interdite","Non, sauf avec l’accord de l’État","Oui, si les époux sont d’accord","Oui, jusqu’à deux mariages"],
+[2,"Une femme peut avorter :","Oui, c’est un droit garanti par la loi","Oui, mais seulement avec l’accord du mari","Non, jamais","Non, c’est interdit par la loi"],
+[2,"Qu’est-ce qu’une infraction ?","Un acte interdit par la loi","Un cadeau","Un droit","Une opinion"],
+[2,"Quelle est l’infraction la plus grave ?","Le crime","La contravention","Le délit","La désobéissance"],
+[2,"Que doit faire une personne en cas d’accident ?","Protéger, alerter les secours et porter secours","Partir rapidement","Filmer la scène","Attendre sans rien faire"],
+[2,"Quel est le rôle de la police ?","Assurer la sécurité et faire respecter la loi","Juger les personnes","Voter les lois","Soigner les malades"],
+[2,"Jeter une bouteille dans la rue est :","Interdit et sanctionné par une amende","Autorisé","Un geste civique","Obligatoire"],
+[2,"Qui sanctionne l’auteur d’un vol ?","La justice","Le maire","Le préfet","La victime"],
+[2,"En quoi consiste la traite des êtres humains ?","Exploiter des personnes contre leur volonté","Vendre des objets","Organiser des voyages","Aider à trouver un emploi"],
+[2,"Que risque une personne qui ne respecte pas la loi ?","Une sanction","Une récompense","Rien du tout","Un diplôme"],
+[3,"En quelle année a débuté la Révolution française ?","1789","1715","1848","1914"],
+[3,"Qui était Napoléon Ier ?","Un empereur des Français","Un roi de France","Un président de la République","Un philosophe"],
+[3,"Quand a eu lieu la Seconde Guerre mondiale ?","1939-1945","1914-1918","1870-1871","1950-1953"],
+[3,"Quelle guerre a eu lieu entre 1914 et 1918 ?","La Première Guerre mondiale","La Seconde Guerre mondiale","La guerre de Cent Ans","La guerre d’Algérie"],
+[3,"Le 11 novembre est un jour férié. À quoi correspond cette date ?","À l’armistice de 1918","À la fin de la Seconde Guerre mondiale","À la prise de la Bastille","À la Révolution française"],
+[3,"En quelle année l’esclavage a-t-il été aboli définitivement en France ?","1848","1789","1905","1946"],
+[3,"Qui a rendu l’école gratuite, laïque et obligatoire ?","Jules Ferry","Napoléon","Charles de Gaulle","Louis XIV"],
+[3,"Qui a fondé la Ve République ?","Charles de Gaulle","Napoléon III","Jules Ferry","Victor Hugo"],
+[3,"Qui était le roi de France au moment de la Révolution française ?","Louis XVI","Louis XIV","Louis XV","Napoléon"],
+[3,"Combien y a-t-il eu de républiques en France ?","5","3","4","6"],
+[3,"Qu’est-ce que la Shoah ?","L’extermination des Juifs d’Europe par les nazis","Une bataille de Napoléon","Une fête religieuse","Un traité de paix"],
+[3,"Quelle est la capitale de la France ?","Paris","Lyon","Marseille","Bordeaux"],
+[3,"Quel fleuve coule en France ?","La Loire","Le Nil","Le Danube","L’Amazone"],
+[3,"Quel océan borde la côte ouest française ?","L’océan Atlantique","L’océan Pacifique","L’océan Indien","L’océan Arctique"],
+[3,"Quelle est la mer au sud de la France métropolitaine ?","La Méditerranée","La mer du Nord","La mer Noire","La mer Baltique"],
+[3,"Quelle chaîne de montagnes est située entre la France et l’Italie ?","Les Alpes","Les Pyrénées","Les Vosges","Le Jura"],
+[3,"Combien y a-t-il de régions en France métropolitaine ?","13","18","22","9"],
+[3,"Quelle île est un département d’outre-mer français ?","La Réunion","Cuba","La Sicile","Madagascar"],
+[3,"Sur quel continent se situe la France métropolitaine ?","L’Europe","L’Asie","L’Afrique","L’Amérique"],
+[3,"Dans quelle ville se trouve la tour Eiffel ?","Paris","Lille","Nice","Toulouse"],
+[3,"Qui était Molière ?","Un auteur de théâtre","Un peintre","Un roi","Un musicien"],
+[3,"Qu’est-ce que le Louvre ?","Un musée","Un palais présidentiel","Une gare","Une université"],
+[3,"Qui était Simone de Beauvoir ?","Une écrivaine et philosophe féministe","Une chanteuse","Une reine de France","Une peintre"],
+[3,"Qui était Paul Cézanne ?","Un peintre","Un poète","Un homme politique","Un architecte"],
+[3,"Quand célèbre-t-on Noël ?","Le 25 décembre","Le 1er janvier","Le 14 février","Le 1er novembre"],
+[4,"Quel numéro d’urgence permet d’appeler le SAMU ?","Le 15","Le 17","Le 18","Le 12"],
+[4,"Quel numéro d’urgence permet d’appeler les pompiers ?","Le 18","Le 15","Le 17","Le 10"],
+[4,"Quelle est la durée légale du temps de travail par semaine ?","35 heures","39 heures","42 heures","48 heures"],
+[4,"Qu’est-ce que le SMIC ?","Le salaire minimum légal","Une aide au logement","Un impôt","Une retraite"],
+[4,"Qui est aidé par France Travail ?","Les personnes qui cherchent un emploi","Les retraités","Les élèves","Les médecins"],
+[4,"Le travail non déclaré est :","Illégal","Autorisé","Obligatoire","Conseillé"],
+[4,"À quoi sert la carte Vitale ?","À se faire rembourser les frais de santé","À voter","À conduire","À payer ses impôts"],
+[4,"À quoi sert une mutuelle santé ?","À compléter le remboursement de l’Assurance maladie","À payer son loyer","À trouver un emploi","À s’inscrire à l’école"],
+[4,"En cas de problème de santé non urgent, à qui faut-il s’adresser en premier ?","Au médecin traitant","Aux urgences","Au maire","Aux pompiers"],
+[4,"Dans quelles situations doit-on se rendre aux urgences de l’hôpital ?","En cas de danger vital ou d’urgence grave","Pour un petit rhume","Pour renouveler une ordonnance","Pour un conseil"],
+[4,"Quel est l’objectif des vaccinations obligatoires ?","Protéger la santé de chacun et de tous","Faire payer les familles","Limiter les voyages","Aucun objectif"],
+[4,"Jusqu’à quel âge l’école est-elle obligatoire ?","16 ans","12 ans","14 ans","18 ans"],
+[4,"Pour qui l’école est-elle obligatoire ?","Pour tous les enfants de 3 à 16 ans, français ou étrangers","Seulement pour les enfants français","Seulement pour les garçons","Seulement pour les enfants de 6 à 10 ans"],
+[4,"Quel diplôme obtient-on à la fin du lycée ?","Le baccalauréat","Le brevet","La licence","Le master"],
+[4,"Dans quel établissement vont les élèves après l’école élémentaire ?","Au collège","À la maternelle","À l’université","À l’école primaire"],
+[4,"Une femme peut-elle créer son entreprise ?","Oui, comme un homme","Oui, mais seulement avec l’accord de son mari","Non, jamais","Non, c’est réservé aux hommes"],
+[4,"À quelles conditions un mariage est-il reconnu juridiquement ?","Il doit être célébré à la mairie par un officier d’état civil","Il suffit d’une cérémonie religieuse","Il suffit d’une promesse orale","Il est signé chez un notaire"],
+[4,"Quand faut-il déclarer son enfant au service d’état civil de la mairie ?","Dans les 5 jours après la naissance","Dans un an","Dans trois mois","À ses 18 ans"],
+[1,"Les dirigeants sont élus par les citoyens dans :","Une démocratie","Une dictature","Une monarchie absolue","Un régime autoritaire"],
+[1,"A-t-on le droit de ne pas respecter une loi ?","Non, la loi s’applique à tous","Non, sauf les élus","Oui, si on n’est pas d’accord","Oui, si on est étranger"],
+[1,"Qui doit respecter la loi ?","Tout le monde, sans exception","Seulement les citoyens français","Seulement les personnes majeures","Seulement les personnes qui travaillent"],
+[1,"Quel est le rôle de l’autorité judiciaire ?","Faire respecter la loi et sanctionner ceux qui l’enfreignent","Voter les lois","Gouverner le pays","Organiser les élections"],
+[1,"Quel pouvoir détient un juge ? Le pouvoir :","Judiciaire","Législatif","Exécutif","Religieux"],
+[1,"L’autorité judiciaire est exercée par :","Les juges et les magistrats","Les députés","Les préfets","Les maires"],
+[1,"Que se passe-t-il si un ministre ne respecte pas la loi ?","Il peut être jugé et sanctionné comme tout citoyen","Il est protégé par sa fonction","Il ne risque rien","Seul le président peut le juger"],
+[1,"Qui est élu lors des élections législatives ?","Les députés","Les sénateurs","Le maire","Le président de la République"],
+[1,"Qui est élu lors des élections présidentielles ?","Le président de la République","Les députés","Le maire","Le Premier ministre"],
+[1,"Quelle condition est nécessaire pour voter aux élections ?","Être inscrit sur les listes électorales","Avoir un diplôme","Avoir un emploi","Être marié"],
+[1,"Qui peut voter aux élections en France ?","Les citoyens français majeurs","Tous les habitants","Les enfants dès 10 ans","Seulement les fonctionnaires"],
+[1,"Concernant les partis politiques, quelle proposition est correcte ?","Chacun est libre d’adhérer ou non à un parti","Il faut adhérer à un parti pour voter","Un seul parti est autorisé","L’adhésion est obligatoire"],
+[1,"Quel est le rôle des députés ?","Voter les lois et contrôler le gouvernement","Appliquer les lois","Juger les délits","Diriger la commune"],
+[1,"Qui élit les députés ?","Les citoyens","Le président de la République","Les sénateurs","Les juges"],
+[1,"Qui vote les lois ?","Le Parlement","Le président de la République","Les juges","Le préfet"],
+[1,"Qui représente l’État dans un département ?","Le préfet","Le maire","Le député","Le juge"],
+[1,"Quel est le rôle du Parlement ?","Voter les lois","Appliquer les lois","Juger les délits","Nommer les préfets"],
+[1,"Quel est le régime politique de la France aujourd’hui ?","Une démocratie","Une monarchie","Une dictature","Un empire"],
+[1,"Quelle condition est nécessaire pour voter aux élections européennes ?","Être citoyen de l’Union européenne, majeur et inscrit sur les listes","Être né en France","Avoir un emploi","Parler plusieurs langues"],
+[1,"À quelle fréquence les élections européennes sont-elles organisées ?","Tous les 5 ans","Tous les 3 ans","Tous les 7 ans","Tous les 10 ans"],
+[1,"Qui élit les députés européens ?","Les citoyens de l’Union européenne","Les chefs d’État","Les maires","Les juges européens"],
+[2,"Comment s’appelle le texte qui énonce les droits et devoirs des personnes résidant en France ?","La Charte des droits et devoirs du citoyen français","Le Code de la route","Le Code du travail","Le règlement intérieur"],
+[2,"Concernant les droits individuels, quelle proposition est correcte ?","Chacun a des droits qui s’accompagnent de devoirs","Il n’y a aucun devoir","Les droits dépendent de la religion","Seuls les adultes ont des droits"],
+[2,"Lequel de ces droits est un droit fondamental ?","La liberté d’expression","Le droit d’avoir une voiture","Le droit de ne pas payer d’impôts","Le droit de ne pas travailler"],
+[2,"Parmi ces textes, lequel garantit les droits et libertés en France ?","La Constitution","Le Code de la route","Le règlement d’un immeuble","Un contrat de travail"],
+[2,"Qu’est-ce que la liberté d’expression ?","Le droit d’exprimer ses opinions dans le respect de la loi","Le droit d’insulter","Le droit de mentir","Le droit de ne rien dire"],
+[2,"Quel droit permet à une personne de se défendre devant la justice ?","Le droit à la défense","Le droit de vote","Le droit de grève","Le droit au logement"],
+[2,"Quel est le texte fondateur établissant les droits et les devoirs de chaque citoyen ?","La Déclaration des droits de l’homme et du citoyen","Le Code civil","Le Code de la route","Le règlement de l’école"],
+[2,"Quel texte a été adopté pendant la Révolution française ?","La Déclaration des droits de l’homme et du citoyen","La Constitution de 1958","La loi de 1905","Le Code du travail"],
+[2,"Quelle liberté permet à une personne de ne pas avoir de religion ?","La liberté de conscience","La liberté de circulation","La liberté d’entreprendre","La liberté de la presse"],
+[2,"Est-il toujours possible de divorcer ?","Oui, même si l’un des époux refuse","Oui, mais seulement avec l’accord du mari","Non, jamais","Non, le mariage est indissoluble"],
+[2,"Concernant les limites aux libertés individuelles, quelle proposition est correcte ?","Elles sont limitées par la loi et par les droits des autres","Elles sont illimitées","Elles dépendent de la religion","Elles sont fixées par chaque famille"],
+[2,"Faut-il réduire ses déchets ?","Oui, pour protéger l’environnement","Oui, mais seulement dans les grandes villes","Non, ce n’est pas utile","Non, c’est le travail de la mairie uniquement"],
+[2,"Pourquoi les libertés individuelles peuvent-elles être limitées ?","Pour protéger les droits des autres et l’ordre public","Pour punir les étrangers","Pour favoriser les riches","Sans aucune raison"],
+[2,"Que permet la citoyenneté française ?","Voter et participer à la vie politique","Ne pas payer d’impôts","Ne pas respecter la loi","Avoir un emploi garanti"],
+[2,"Quel est le rôle de la gendarmerie ?","Assurer la sécurité et faire respecter la loi","Juger les personnes","Soigner les malades","Enseigner à l’école"],
+[2,"Comment peut-on réduire ses déchets ?","En triant et en évitant le gaspillage","En jetant tout dans la nature","En brûlant les déchets","En achetant plus d’emballages"],
+[2,"Déposer une machine à laver cassée sur le trottoir est :","Interdit et sanctionné","Autorisé","Un geste écologique","Obligatoire"],
+[2,"Que doit faire une victime de violences ?","Contacter la police ou la gendarmerie (17) et demander de l’aide","Se taire","Se venger","Attendre que ça passe"],
+[3,"Lequel de ces personnages historiques est français ?","Louis Pasteur","Mozart","Churchill","Bismarck"],
+[3,"Dans quelle République est-on aujourd’hui ?","La Ve République","La IVe République","La IIIe République","La VIe République"],
+[3,"Quel pays ou région du monde a été colonisé par la France ?","L’Algérie","La Suède","Le Japon","L’Australie"],
+[3,"En quelle année a été créée la Communauté économique européenne (CEE) ?","1957","1945","1992","2002"],
+[3,"Qui a été le premier Président élu sous la Ve République ?","Charles de Gaulle","Georges Pompidou","François Mitterrand","Jacques Chirac"],
+[3,"Depuis quelle année l’école publique est-elle gratuite ?","1881","1789","1905","1958"],
+[3,"Que célèbre-t-on le 14 juillet ?","La fête nationale (prise de la Bastille)","L’armistice de 1918","La fin de la Seconde Guerre mondiale","La naissance de la Ve République"],
+[3,"Pourquoi l’année 1958 est-elle importante pour la France ?","Création de la Ve République","Début de la Révolution","Fin de la Première Guerre mondiale","Création de l’euro"],
+[3,"Quelle ville est française ?","Lyon","Milan","Genève","Madrid"],
+[3,"Qu’est-ce que Paris ?","La capitale de la France","Une région","Un fleuve","Un pays"],
+[3,"Quelle ville est un grand port maritime ?","Marseille","Limoges","Dijon","Clermont-Ferrand"],
+[3,"Quelle ville est située au bord de la mer Méditerranée ?","Nice","Brest","Lille","Strasbourg"],
+[3,"Où se situe la Corse ?","Dans la mer Méditerranée","Dans l’océan Atlantique","Dans la Manche","En mer du Nord"],
+[3,"Qui était Charles Baudelaire ?","Un poète","Un peintre","Un roi","Un architecte"],
+[3,"Qui était George Sand ?","Une écrivaine du XIXe siècle","Une reine","Une chanteuse","Une scientifique"],
+[3,"Qui était Albert Camus ?","Un écrivain","Un peintre","Un président","Un sculpteur"],
+[3,"Qui était Marc Chagall ?","Un peintre","Un écrivain","Un président","Un musicien"],
+[3,"Qui était Joséphine Baker ?","Une chanteuse, danseuse et résistante","Une reine de France","Une présidente","Une scientifique"],
+[3,"Qui était une chanteuse française célèbre ?","Édith Piaf","Madonna","Beyoncé","Shakira"],
+[3,"Qui était Jean de La Fontaine ?","Un poète qui a écrit des fables","Un roi","Un peintre","Un général"],
+[3,"Quel écrivain est français ?","Émile Zola","Charles Dickens","Léon Tolstoï","Ernest Hemingway"],
+[4,"Après avoir obtenu le permis de conduire, que faut-il faire pour conduire sa voiture ?","Assurer son véhicule","Passer un second permis","S’inscrire à la mairie","Payer une taxe d’autorisation"],
+[4,"Que doit faire un employeur pour fixer un salaire ?","Respecter le SMIC","Payer moins que le SMIC","Payer sans contrat","Fixer le salaire sans limite"],
+[4,"Quelle est la première démarche à réaliser pour chercher un emploi ?","S’inscrire à France Travail","Aller à la mairie","Passer le permis","S’inscrire à l’université"],
+[4,"Une personne étrangère en situation régulière peut créer son entreprise :","Oui, selon les conditions de son titre de séjour","Oui, sans aucun titre de séjour","Non, jamais","Non, c’est réservé aux Français"],
+[4,"À partir de quel âge un mineur peut-il travailler ?","À 16 ans, sauf exceptions encadrées","À 10 ans","À 12 ans","À 14 ans"],
+[4,"Auprès de quel organisme faut-il demander le remboursement des frais de santé ?","L’Assurance maladie","La mairie","La préfecture","Le tribunal"],
+[4,"Qu’est-ce qu’un numéro d’urgence ?","Un numéro gratuit à appeler en cas de danger","Un numéro pour commander un repas","Un numéro pour la météo","Un numéro de carte bancaire"],
+[4,"Concernant l’accès aux soins, quelle proposition est correcte ?","Toute personne résidant en France peut être soignée","Seuls les Français sont soignés","Il faut toujours payer avant","Seuls les riches sont soignés"],
+[4,"L’autorité parentale prévoit l’obligation :","De protéger, d’éduquer et de scolariser son enfant","De choisir son métier","De choisir sa religion","De le marier"],
+[4,"Un enfant inscrit à l’école :","Doit y aller régulièrement","Peut s’absenter quand il veut","Y va seulement s’il le souhaite","Y va seulement le matin"],
+[4,"Les enfants qui ne parlent pas français :","Sont scolarisés et reçoivent un soutien pour apprendre le français","Ne peuvent pas aller à l’école","Doivent attendre 18 ans","Vont dans une école à l’étranger"],
+[0,"À quoi correspond la date du 14 juillet ?","La Fête nationale française (14 juillet 1789 et 1790)","C’est la date d’adoption de la Constitution de 1958","C’est le jour de la fête du Travail","C’est l’anniversaire de la mort de Napoléon Ier"],
+[0,"Quel est l’un des symboles de la République française ?","Le drapeau tricolore","La Marseillaise, l’hymne national","L’euro, la monnaie officielle","Marianne, le buste de la République"],
+[0,"Le principe d’égalité signifie que :","La loi s’applique de la même façon à tous, avec les mêmes droits et devoirs","Chacun peut agir librement, sans aucune limite ni contrainte légale","L’État distribue de façon identique les mêmes ressources à tous","Seuls les citoyens français de naissance ont des droits pleinement égaux"],
+[0,"« Liberté, égalité, fraternité », c’est :","La devise de la République française","L’hymne national de la France","Un principe de l’Union européenne","La Constitution de 1958"],
+[0,"A-t-on le droit d’insulter publiquement quelqu’un parce qu’il est différent (handicap, apparence physique, sexe…) ?","Non : les injures liées à des caractéristiques protégées sont punies par la loi","Oui, à condition de ne pas être fonctionnaire de l’État","Oui, si cela reste dans un cadre strictement privé entre adultes","Non, sauf si la victime décide elle-même de porter plainte"],
+[0,"Certains métiers peuvent-ils être réservés aux hommes ?","Non : exclure quelqu’un d’un emploi à cause de son sexe est une discrimination interdite","Non, sauf disposition contraire d’un accord collectif de branche","Oui, mais uniquement pour les métiers légalement réglementés","Oui, si l’employeur fournit une justification médicale valide"],
+[0,"De quand date la Constitution de la Ve République ?","Du 4 octobre 1958","Du 14 juillet 1789","Du 26 août 1789","Du 4 octobre 1946"],
+[0,"Le régime de la France est :","Une République (la Ve République)","Une confédération d’États","Un empire","Une monarchie constitutionnelle"],
+[0,"Lequel de ces symboles représente officiellement la République française ?","Marianne","Le coq gaulois","La tour Eiffel","La Marseillaise"],
+[0,"Où peut-on voir la devise de la République ?","Sur les bâtiments officiels (mairies, écoles, etc.)","Seulement dans les ambassades françaises à l’étranger","Sur les billets de banque en euros","Uniquement dans les textes officiels du gouvernement"],
+[0,"Quels sont des symboles officiels de la République française ?","La devise, le drapeau, l’hymne national, Marianne et la fête nationale","L’euro, la tour Eiffel, le baccalauréat et Paris","Le Parlement, le gouvernement, la justice et la police","La laïcité, les droits de l’homme, le vote et la solidarité"],
+[0,"Qu’est-ce que l’égalité ?","L’égalité de traitement et de droits pour tous devant la loi","L’identité de traitement uniquement pour les fonctionnaires","La redistribution égale des richesses de l’État","L’obligation de travailler pour tous"],
+[0,"Que signifie la liberté ?","Faire ce qui est autorisé sans nuire","Ne pas payer d’impôts si l’on le décide","Imposer ses choix aux autres au nom de ses droits","Faire tout ce que l’on veut sans contrainte"],
+[0,"Que signifie le mot « fraternité » dans la devise française ?","La solidarité : s’entraider et vivre ensemble","La liberté individuelle","L’égalité de tous devant l’impôt","Le respect des croyances religieuses"],
+[0,"Quel animal est un symbole de la France ?","Le coq gaulois","Le lion héraldique","La fleur de lys royale","L’aigle bicéphale"],
+[0,"Quel est l’un des rôles des associations ?","Aider les personnes et défendre des intérêts collectifs","Remplacer intégralement les services publics défaillants","Lever et percevoir des impôts locaux spécifiques","Générer des bénéfices redistribués pour le compte de l’État"],
+[0,"Quel est le nom de l’hymne national ?","La Marseillaise","L’Ode à la joie","Le Triomphe de la République","Le Chant du départ"],
+[0,"Quel symbole de la République française est tricolore ?","Le drapeau français","Le coq gaulois, symbole sportif","Le buste de Marianne","La tour Eiffel, monument parisien"],
+[0,"Quelle est la date de la fête nationale française ?","Le 14 juillet","Le 8 mai","Le 11 novembre","Le 25 décembre"],
+[0,"Quelle est la devise de la République française ?","Liberté, égalité, fraternité","Travail, famille, patrie","Unité, dignité, paix","Liberté, sécurité, prospérité"],
+[0,"Quelle est la langue officielle de la République française ?","Le français","L’occitan","Le latin","L’alsacien"],
+[0,"Quelle est la place de la langue française dans la République ?","Le français est la langue officielle de la République (principe constitutionnel)","Le français est imposé uniquement dans l’administration centrale","Le français est l’une des langues officielles parmi plusieurs","Le français est la langue nationale mais pas officielle"],
+[0,"Quelle liberté permet à chacun d’exprimer ses idées ?","La liberté d’expression","La liberté d’association","La liberté de circuler","La liberté de conscience"],
+[0,"Quelle proposition est correcte ? La liberté d’expression :","Est une liberté fondamentale avec des limites légales (diffamation, injure)","N’existe pas dans la Constitution française","Interdit toute critique des institutions","Est absolue et sans aucune restriction légale"],
+[0,"Quelles sont les couleurs du drapeau français ?","Bleu, blanc, rouge","Rouge, blanc, noir","Bleu, blanc, vert","Bleu, rouge, jaune"],
+[0,"Qu’est-ce que la Marseillaise ?","L’hymne national de la France","La Brabançonne, hymne belge","Le Chant des partisans, chant de la Résistance","L’Ode à la joie, hymne européen"],
+[0,"Qu’est-ce qui est traditionnellement organisé sur les Champs-Élysées le 14 juillet pour célébrer la fête nationale ?","Un défilé militaire, en présence du président de la République","Un feu d’artifice au palais de Versailles","Un concert gratuit à l’Opéra de Paris","Une procession religieuse dans les cathédrales"],
+[0,"Qui est Marianne ?","L’allégorie féminine de la République française","Une figure historique réelle du Moyen Âge","La patronne protectrice des marins français","La dernière reine de France sous l’Ancien Régime"],
+[0,"Une personne peut-elle changer librement de religion ?","Oui : la liberté de conscience inclut le droit de changer de religion","Oui, mais seulement avec l’accord de sa famille","Non : changer de religion est interdit par la loi française","Non, sauf conversion vers une religion reconnue par l’État"],
+[0,"La France est une République indivisible, …, démocratique et sociale. Complétez cette phrase extraite de l’article 1er de la Constitution :","laïque","républicaine","unitaire","souveraine"],
+[0,"En quelle année la loi de séparation des Églises et de l’État a-t-elle été votée ?","1905","1936","1789","1881"],
+[0,"Que permet le principe de laïcité ?","Il garantit la neutralité de l’État et protège la liberté de conscience","Il interdit toute pratique religieuse dans l’espace public","Il oblige les fonctionnaires à se déclarer athées","Il impose à tous la même religion d’État"],
+[0,"Quel droit est garanti par la laïcité ?","La liberté de conscience (croire ou ne pas croire)","Le droit de vote à toutes les élections","L’égalité de salaire entre hommes et femmes","L’accès gratuit à l’enseignement supérieur"],
+[0,"Pourquoi le principe de laïcité doit-il être respecté à l’école ?","Pour assurer la neutralité et protéger la liberté de conscience des élèves","Pour favoriser une seule religion dans les établissements publics","Pour que les élèves portent tous le même uniforme","Pour interdire tout enseignement sur les religions"],
+[0,"Qu’est-ce que la laïcité ?","Un principe selon lequel l’État est neutre vis-à-vis des religions","L’obligation de croire en un dieu civil","L’obligation de n’avoir aucune religion","Le droit pour l’État de contrôler les religions"],
+[0,"Un enfant peut-il refuser d’aller à l’école pour une raison religieuse ?","Non : la scolarité est obligatoire et on ne peut pas refuser les cours pour un motif religieux","Oui, mais seulement pour les jours de fête religieuse reconnus","Oui, si l’absence est justifiée par un motif religieux sérieux","Non, mais les devoirs religieux sont dispensés de notation"],
+[0,"Une personne a-t-elle le droit de ne pas croire en une religion ?","Oui : la liberté de conscience comprend le droit de ne pas croire","Oui, mais ce droit n’est reconnu qu’à partir de 18 ans","Non : la loi impose une religion d’État à la naissance","Non, sauf en cas de conversion officielle reconnue"],
+[1,"Qui nomme le Premier ministre ?","Le président de la République","Le Conseil constitutionnel après avis conforme","Le Parlement (Assemblée nationale et Sénat)","Le Sénat statuant à la majorité absolue"],
+[1,"Le Parlement est composé :","De l’Assemblée nationale et du Sénat","De la Cour des comptes et du Conseil supérieur de la magistrature","Du Conseil économique, social et environnemental et du Conseil d’État","Du Conseil constitutionnel et du Conseil d’État"],
+[1,"Qu’est-ce que le pouvoir exécutif ? Le pouvoir :","Qui gouverne et applique les lois","Qui délibère et vote les lois","Qui juge et condamne les infractions","Qui contrôle la conformité des lois à la Constitution"],
+[1,"Quand sont élus les sénateurs ?","Tous les 3 ans, par moitié, au suffrage indirect","Tous les 5 ans, en même temps que le président","Tous les 6 ans, tous ensemble au suffrage direct","Chaque année, par tirage au sort"],
+[1,"Qui est élu lors des élections municipales ?","Les conseillers municipaux (qui élisent ensuite le maire)","Les députés","Les sénateurs","Le président de la République"],
+[3,"Quand a eu lieu la Première Guerre mondiale ?","1914-1918","1939-1945","1870-1871","1950-1953"],
+[4,"Quel est le rôle du médecin traitant ?","Suivre sa santé et coordonner les soins","Délivrer les passeports","Remplacer l’Assurance maladie","Soigner uniquement en cas d’urgence vitale"],
+[1,"En quelle année est née l’Union européenne (traité de Maastricht) ?","1992","1957","1945","2002"],
+[1,"Depuis quelle année les pièces et les billets en euros circulent-ils ?","2002","1957","1992","2010"],
+[1,"Comment est le drapeau de l’Union européenne ?","Fond bleu avec un cercle de douze étoiles jaunes","Fond blanc avec une croix rouge","Trois bandes bleue, blanche et rouge","Fond jaune avec des étoiles bleues"],
+[1,"Quel est l’hymne de l’Union européenne ?","L’Ode à la joie","La Marseillaise","Le Chant des partisans","L’Internationale"],
+[1,"Quelle est une institution de l’Union européenne ?","La Commission européenne","Le Conseil constitutionnel","La Banque de France","Le Sénat"],
+[1,"Quel principe de l’Union européenne permet de voyager et de travailler dans les pays membres ?","La libre circulation","La souveraineté nationale","L’assimilation","La laïcité"],
+[1,"Quelle institution vérifie que les lois respectent la Constitution ?","Le Conseil constitutionnel","La Banque de France","La préfecture","L’Assemblée nationale"],
+[1,"Quelle institution défend les droits des citoyens face aux administrations ?","Le Défenseur des droits","La Banque de France","Le Sénat","La préfecture"],
+[2,"En quelle année la Charte de l’environnement a-t-elle été adoptée ?","2004","1789","1946","1905"],
+[2,"À quoi servent les impôts ?","À financer les services publics au bénéfice de tous","À payer les entreprises privées","À enrichir les élus","À rien de précis"],
+[2,"Quel devoir civique peut être demandé à un citoyen français ?","Être juré dans un procès","Être candidat aux élections","Devenir maire","Devenir député"],
+[3,"En quelle année les femmes ont-elles obtenu le droit de vote en France ?","1944","1789","1905","1968"],
+[3,"En quelle année l’ONU a-t-elle été créée ?","1945","1914","1957","1992"],
+[3,"Quel président a aboli la peine de mort en 1981 ?","François Mitterrand","Charles de Gaulle","Jacques Chirac","Valéry Giscard d’Estaing"],
+[3,"Qui a lancé l’appel du 18 juin 1940 ?","Charles de Gaulle","Le maréchal Pétain","Georges Clemenceau","Jean Jaurès"],
+[3,"Quel empereur a créé le Code civil au début du XIXe siècle ?","Napoléon Ier","Louis XIV","Napoléon III","Charlemagne"],
+[3,"En quelle année la Première République a-t-elle été proclamée ?","1792","1789","1848","1870"],
+[3,"Environ combien d’habitants compte la France en 2025 ?","Environ 68 millions","Environ 45 millions","Environ 90 millions","Environ 120 millions"],
+[3,"Combien y a-t-il de départements et régions d’outre-mer (DROM) ?","5","3","8","10"],
+[3,"Quelle est la place de la France parmi les destinations touristiques du monde ?","La première","La dixième","La troisième","La vingtième"],
+[3,"Combien de personnes parlent français dans le monde (Francophonie) ?","Environ 321 millions","Environ 50 millions","Environ 100 millions","Environ 900 millions"],
+[3,"Le français est la … langue la plus parlée au monde.","5e","1re","2e","10e"],
+[3,"Quelle organisation rassemble les pays francophones ?","L’Organisation internationale de la Francophonie","L’OTAN","L’Union européenne","L’ONU"]
+];
+var cat=-1,list=[],i=0,sc=0,done=0,answered=false,bad=[],KEY="civ_wrong_v1",exam=false,tmr=null,tleft=0,pc=[];
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return[]}}
+var saved=load();
+function store(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}}
+function mark(q,ok){var x=saved.indexOf(q[1]);if(ok&&x>=0)saved.splice(x,1);else if(!ok&&x<0)saved.push(q[1]);store();chips()}
+function sh(a){a=a.slice();for(var k=a.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=a[k];a[k]=a[j];a[j]=t}return a}
+function begin(l){exam=false;clearInterval(tmr);document.getElementById("tm").textContent="";list=sh(l);i=0;sc=0;done=0;bad=[];chips();show()}
+function fmt(t){var m=Math.floor(t/60),s=t%60;return m+":"+(s<10?"0":"")+s}
+function tick(){tleft--;if(tleft<=0){i=list.length;show();return}document.getElementById("tm").textContent="⏱ "+fmt(tleft)}
+function exStart(){var qt=[[3,2,6],[3,2,1],[2,3,6],[3,3,2],[1,1,1,1]],tot=[11,6,11,8,4],l=[];pc=[];
+qt.forEach(function(ns,t){var items=[],ix=0,pick=[],used={};Q.forEach(function(q){if(q[0]===t)items.push([q,NT[t].charAt(ix++)])});
+ns.forEach(function(n,k){var ch="abcd".charAt(k);sh(items.filter(function(e){return e[1]===ch})).slice(0,n).forEach(function(e){pick.push(e[0]);used[e[0][1]]=1})});
+sh(items.filter(function(e){return !used[e[0][1]]})).slice(0,tot[t]-pick.length).forEach(function(e){pick.push(e[0])});
+l=l.concat(pick);pc.push([0,0])});
+cat=-3;begin(l);exam=true;tleft=2700;clearInterval(tmr);tmr=setInterval(tick,1000);document.getElementById("tm").textContent="⏱ "+fmt(tleft)}
+function start(c){cat=c;begin(Q.filter(function(q){return c<0||q[0]===c}))}
+function review(){var l=Q.filter(function(q){return saved.indexOf(q[1])>=0});if(!l.length)return;cat=-2;begin(l)}
+function chips(){var h='<button class="chip'+(cat===-1?' on':'')+'" data-c="-1">'+lb('Tout ('+Q.length+')','ทั้งหมด')+'</button>';
+CATS.forEach(function(n,k){h+='<button class="chip'+(cat===k?' on':'')+'" data-c="'+k+'">'+lb(n,TH[k])+'</button>'});
+h+='<button class="chip'+(cat===-4?' on':'')+'" data-c="-4">'+lb('Référence (réponses)','อ้างอิง (เฉลย)')+'</button>';
+h+='<button class="chip'+(cat===-3?' on':'')+'" data-c="-3">'+lb('Examen blanc (40 q · 45 min)','ข้อสอบจำลอง 40 ข้อ 45 นาที')+'</button>';
+h+='<button class="chip'+(cat===-2?' on':'')+'" data-c="-2">'+lb('Mes erreurs ('+saved.length+')','ข้อที่ผิดของฉัน')+'</button>';
+var e=document.getElementById("chips");e.innerHTML=h;
+Array.prototype.forEach.call(e.children,function(b){b.onclick=function(){var c=+b.getAttribute("data-c");if(c===-4)ref();else if(c===-3)exStart();else if(c===-2)review();else start(c)}})}
+function ref(){exam=false;clearInterval(tmr);document.getElementById("tm").textContent="";cat=-4;chips();
+document.getElementById("prog").textContent="Référence · อ้างอิง : "+Q.length+" questions";document.getElementById("score").textContent="";
+var c=document.getElementById("card");c.innerHTML='<input id="se" class="se" type="search" placeholder="Rechercher · ค้นหาคำถามหรือคำตอบ…" aria-label="Rechercher"><p class="thh">หน้าอ้างอิง: คำถามและเฉลยที่ถูกต้อง แยกตามหัวข้อ</p><div id="rl"></div>';
+var se=document.getElementById("se");
+function draw(){var t=se.value.toLowerCase(),h="";
+CATS.forEach(function(n,k){var it=[],ix=0;Q.forEach(function(q){if(q[0]!==k)return;var th=TT[k]&&TT[k][ix++];if(!t||(q[1]+" "+q[2]+" "+(th?th[0]+" "+th[1]:"")).toLowerCase().indexOf(t)>=0)it.push([q,th])});if(!it.length)return;
+h+='<details class="rf" open><summary>'+n+' · '+TH[k]+' ('+it.length+')</summary>';
+it.forEach(function(e){var q=e[0],th=e[1];h+='<div class="ri"><div class="rq">'+q[1]+'</div>'+(th?'<div class="rt">'+th[0]+'</div>':'')+'<div class="ra">✔ '+q[2]+'</div>'+(th?'<div class="rt ra">✔ '+th[1]+'</div>':'')+'</div>'});h+='</details>'});
+document.getElementById("rl").innerHTML=h||'<p>Aucun résultat.</p>'}
+se.oninput=draw;draw()}
+function show(){
+var c=document.getElementById("card"),p=document.getElementById("prog"),s=document.getElementById("score");
+s.textContent="Score : "+sc+" / "+done;
+if(i>=list.length){var ex=exam,left=tleft;if(ex){exam=false;clearInterval(tmr);document.getElementById("tm").textContent=""}
+p.textContent="Terminé";var h="";
+if(ex){var ok=sc>=32;h+='<p class="q" style="color:var(--'+(ok?'ok':'ko')+')">'+(ok?'Réussi ✅':'Échoué ❌')+' : '+sc+' / 40 (seuil : 80 % = 32/40)</p>'+(left<=0?'<p>Temps écoulé.</p>':'')+'<p>';
+CATS.forEach(function(n,t){h+=n+' : '+pc[t][0]+' / '+pc[t][1]+'<br>'});h+='</p>'}
+else h+=bad.length?'<p class="q">Série terminée : '+sc+' / '+list.length+'</p>':'<p class="q">Bravo ! Tout est correct 🎉</p><p>'+sc+' / '+list.length+' bonnes réponses.</p>';
+if(bad.length)h+='<p>Il reste '+bad.length+' erreur'+(bad.length>1?'s':'')+' à corriger.</p>';
+h+='<div class="act">'+(bad.length?'<button class="btn" id="re">Refaire les erreurs ('+bad.length+')</button>':'')+'<button class="btn sec" id="nw">'+(ex?'Nouvel examen blanc':'Recommencer')+'</button></div>';
+c.innerHTML=h;
+if(bad.length)document.getElementById("re").onclick=function(){begin(bad)};
+document.getElementById("nw").onclick=function(){if(ex)exStart();else start(cat<0?-1:cat)};
+return}
+p.textContent="Question "+(i+1)+" / "+list.length;
+var q=list[i],o=sh(q.slice(2).map(function(t,k){return{t:t,ok:k===0}}));answered=false;
+var h='<div class="cat">'+CATS[q[0]]+' · '+TH[q[0]]+'</div><p class="q">'+q[1]+'</p>';
+o.forEach(function(x,k){h+='<button class="opt" data-k="'+k+'">'+x.t+'</button>'});
+h+='<div class="fb" id="fb"></div><div class="act"><button class="btn" id="nx" disabled>Suivant</button></div>';
+c.innerHTML=h;
+var bs=c.querySelectorAll(".opt");
+Array.prototype.forEach.call(bs,function(b,k){b.onclick=function(){
+if(answered)return;answered=true;done++;
+var good=o[k].ok;if(good)sc++;else bad.push(q);
+mark(q,good);if(exam){pc[q[0]][1]++;if(good)pc[q[0]][0]++}
+Array.prototype.forEach.call(bs,function(x,j){x.disabled=true;if(o[j].ok)x.classList.add("ok");else if(j===k)x.classList.add("ko")});
+var f=document.getElementById("fb");f.style.color=good?"var(--ok)":"var(--ko)";
+f.textContent=good?"Bonne réponse !":"Mauvaise réponse. Elle est ajoutée à « Mes erreurs ».";
+document.getElementById("score").textContent="Score : "+sc+" / "+done;
+var n=document.getElementById("nx");n.disabled=false;n.onclick=function(){i++;show()}}});
+}
+start(-1);
+document.getElementById("go").onclick=function(){document.getElementById("intro").hidden=true;document.getElementById("app").hidden=false;window.scrollTo(0,0)};
+</script></body></html>
